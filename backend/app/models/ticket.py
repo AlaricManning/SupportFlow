@@ -49,7 +49,7 @@ class Ticket(Base):
 
     # Metadata
     order_id = Column(String(100), nullable=True)
-    metadata = Column(JSON, nullable=True)  # Store additional structured data
+    ticket_metadata = Column(JSON, nullable=True)  # Store additional structured data
 
     # Timestamps
     created_at = Column(DateTime, default=datetime.utcnow, index=True)
