@@ -51,20 +51,20 @@ def create_support_workflow():
     # Create the graph
     workflow = StateGraph(SupportAgentState)
 
-    # Add nodes
-    workflow.add_node("triage", triage_agent)
-    workflow.add_node("research", research_agent)
-    workflow.add_node("policy", policy_agent)
-    workflow.add_node("response", response_agent)
-    workflow.add_node("escalation", escalation_agent)
+    # Add nodes (use different names to avoid conflict with state attributes)
+    workflow.add_node("triage_node", triage_agent)
+    workflow.add_node("research_node", research_agent)
+    workflow.add_node("policy_node", policy_agent)
+    workflow.add_node("response_node", response_agent)
+    workflow.add_node("escalation_node", escalation_agent)
 
     # Define the workflow edges (linear for MVP, can be made conditional later)
-    workflow.set_entry_point("triage")
-    workflow.add_edge("triage", "research")
-    workflow.add_edge("research", "policy")
-    workflow.add_edge("policy", "response")
-    workflow.add_edge("response", "escalation")
-    workflow.add_edge("escalation", END)
+    workflow.set_entry_point("triage_node")
+    workflow.add_edge("triage_node", "research_node")
+    workflow.add_edge("research_node", "policy_node")
+    workflow.add_edge("policy_node", "response_node")
+    workflow.add_edge("response_node", "escalation_node")
+    workflow.add_edge("escalation_node", END)
 
     # Compile the graph
     return workflow.compile()

@@ -18,7 +18,7 @@ from app.agents.tools import (
 )
 
 # Initialize instructor-patched OpenAI client for structured outputs
-client = instructor.from_openai(OpenAI(api_key=settings.OPENAI_API_KEY))
+client = instructor.patch(OpenAI(api_key=settings.OPENAI_API_KEY))
 
 
 def triage_agent(state: Dict[str, Any]) -> Dict[str, Any]:
