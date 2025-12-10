@@ -517,9 +517,6 @@ SupportFlow/
 - Policy Decisions: 98% compliant
 - Escalation Rate: ~15% (configurable threshold)
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
@@ -529,16 +526,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Built with [LangGraph](https://github.com/langchain-ai/langgraph)
 - Powered by [OpenAI GPT-4](https://openai.com/)
-- Inspired by [Intercom](https://www.intercom.com/) and [Gorgias](https://www.gorgias.com/)
 
-## Contact
-
-**Your Name** - [your.email@example.com](mailto:your.email@example.com)
 
 Project Link: [https://github.com/yourusername/SupportFlow](https://github.com/yourusername/SupportFlow)
-
----
-
-**⭐ Star this repo if you find it useful!**
-
-Built with ❤️ using AI-first principles
