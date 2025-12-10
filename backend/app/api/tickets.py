@@ -100,7 +100,7 @@ async def create_ticket(ticket_data: TicketCreate, db: Session = Depends(get_db)
     except Exception as e:
         # If agent workflow fails, mark ticket for human review
         ticket.status = TicketStatus.WAITING_HUMAN
-        ticket.metadata = {"error": str(e)}
+        ticket.ticket_metadata = {"error": str(e)}
         db.commit()
         db.refresh(ticket)
         raise HTTPException(
